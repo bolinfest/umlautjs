@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans">
+  <link rel="SHORTCUT ICON" href="favicon.ico">
+  <title>üjs</title>
+  <style>
+  html {
+    background: gray;
+  }
+
+  body {
+    font-family: PT Sans, Arial;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 10px 10px;
+    background: white;
+    position: relative;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #333;
+  }
+
+  h1 {
+    margin: 0;
+  }
+  
+  code {
+    color: green;
+    font-weight: bold;
+  }
+
+  .date {
+    color: gray;
+  }
+
+  .watch-out-for-github-image {
+    margin-right: 20px;
+  }
+  
+  .es5, .license {
+    border: 1px solid #333;
+    background-color: #EEE;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  /* From http://www.eclipsecolorthemes.org/?view=theme&id=2 */
+  pre  { background: #404040; font-size: 16px; padding: 4px; }
+  .pln { color: #FFF }  /* plain text */
+  .str { color: #CC9393 }  /* string content */
+  .kwd { color: #EFEFAF }  /* a keyword */
+  .com { color: #B3B5AF }  /* a comment */
+  .typ { color: #FFF }  /* a type name */
+  .lit { color: #8ACCCF }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #FFF }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+
+  </style>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22334166-1']);
+    _gaq.push(['_setDomainName', '.xn--js-wka.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub">
+
+<h1>üjs - JavaScript with röck döts, mötherfücker</h1>
+<span class="date">v1.0 released April 1, 2011</span>
+
+<p class="watch-out-for-github-image">
+Today's JavaScript developers need fewer
+<a href="http://www.amazon.com/gp/product/1449381871/ref=as_li_tf_tl?ie=UTF8&tag=ujs-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1449381871">well-designed, battle-tested,
+comprehensive JavaScript toolkits</a> and more
+<a href="http://www.robertnyman.com/dlite/">one-off</a>,
+<a href="http://notes.jetienne.com/2011/03/22/microeventjs.html">disconnected</a>,
+and <a href="http://www.dustindiaz.com/qwery">gratuitious</a> JavaScript libraries.
+Why stand on the shoulders of giants when you can command an army of midgets? 
+
+<h2>S&#x0308;ize</h2>
+Let's face it: if a JavaScript library can't fit into a tweet after gzip,
+then it probably contains lots of unnecessary bloat that increases
+download times for your users. For this reason, üjs offers an efficient, compact
+API whose <a href="ü.js">minified version</a> is a mere 134 bytes when gzipped.
+
+<h2>N̈amespace</h2>
+
+As every good JavaScript developer knows, it is best practice to load as many
+JavaScript libraries as possible onto your page (always synchronously,
+just after the opening <code>&lt;body></code> tag). Loading multiple libraries
+with duplicate functionality begets redundancy, and redundancy minimizes
+downtime. 
+
+<p>
+Because you will probably want to use üjs
+alongside some other <a href="http://www.amazon.com/gp/product/1935182323/ref=as_li_tf_tl?ie=UTF8&tag=ujs-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1935182323">popular</a>
+<a href="http://documentcloud.github.com/underscore/">libraries</a> which have
+already claimed the “good” single character namespaces, üjs takes full
+advantage of Section 7.6 of
+<a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf">ES5</a>,
+which explains:
+<div class="es5">
+Unicode escape sequences are also permitted in an <em>IdentifierName</em>,
+where they contribute a single character to the <em>IdentifierName</em>, as
+computed by the CV of the  UnicodeEscapeSequence (see 7.8.4).
+</div> 
+
+<h2>ÄPI</h2>
+
+As explained above, the üjs API is lean to improve performance.
+Only the most critical functions for JavaScript developers are included in the
+library, of which there are two:
+
+<pre><span class="com">/**<br>&nbsp;* Adds umlauts to lowercase vowels in a string.<br>&nbsp;* @param {string} str<br>&nbsp;* @return {string}<br>&nbsp;*/</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> </span><span class="pun">ü</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">str</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">return</span><span class="pln"> str</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">/[aeiou]/</span><span class="pln">g</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">ch</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> m </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; a</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ä'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; e</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ë'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; i</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ï'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; o</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ö'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; u</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ü'</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> m</span><span class="pun">[</span><span class="pln">ch</span><span class="pun">]</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> ch</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="pun">});</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br><br><br></span><span class="com">/**<br>&nbsp;* Spin̈al Tap amplifier volume normalization.<br>&nbsp;* @param {number} num<br>&nbsp;* @return {number}<br>&nbsp;*/</span><span class="pln"><br></span><span class="pun">ü.</span><span class="pln">n</span><span class="pun">̈</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">num</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">return</span><span class="pln"> num </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">11</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="lit">11</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> num</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">};</span></pre>
+
+You can see sample usage of üjs in the accompanying
+<a href="ü_test.html">unit test</a>.
+
+<h2>Ïnternationalization (ï18n)</h2>
+Are you kidding? üjs has international characters in the fucking name!
+How much more ï18n support could you possibly need?
+
+<h2>Öpen Source License</h2>
+
+Although there are plenty of existing software licenses available today, none of
+them appropriately convey the raw power of üjs, so naturally, we had to write
+our own. Because we could not afford any real lawyers, we decided to adapt the
+üjs license from the <a href="http://www.opensource.org/licenses/ntp-license">
+NTP License</a>. Although üjs has little to do with the network time protocol,
+the NTP license was one of the shortest we could find,
+and therefore, the easiest to adapt:
+
+<div class="license">
+Copyright (c) üjs 2011
+<p>
+Përmïssïön tö üsë, cöpy, mödïfy, änd dïstrïbütë thïs söftwärë änd ïts 
+döcümëntätïön för äny pürpösë wïth ör wïthöüt fëë ïs hërëby gräntëd, prövïdëd 
+thät thë äbövë cöpyrïght nötïcë äppëärs ïn äll cöpïës änd thät böth thë 
+cöpyrïght nötïcë änd thïs përmïssïön nötïcë äppëär ïn süppörtïng döcümëntätïön, 
+änd thät thë nämë üjs nöt bë üsëd ïn ädvërtïsïng ör püblïcïty 
+përtäïnïng tö dïstrïbütïön öf thë söftwärë wïthöüt spëcïfïc, wrïttën prïör 
+përmïssïön. üjs mäkës nö rëprësëntätïöns äböüt thë süïtäbïlïty thïs söftwärë för
+äny pürpösë. It ïs prövïdëd "äs ïs" wïthöüt ëxprëss ör ïmplïëd wärränty.</div>
+
+<script type="text/javascript">
+var _sf_async_config={uid:22053,domain:"xn--js-wka.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+       "js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+
+</body>
+</html>

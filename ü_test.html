@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Unit test for üjs</title>
+</head>
+
+<script src="http://closure-library.googlecode.com/svn/trunk/closure/goog/base.js"></script>
+<script>
+goog.require('goog.testing.jsunit');
+</script>
+<script src="ü.js"></script>
+
+<script>
+var test_ü = function() {
+  assertEquals(
+      'Thë qüïck bröwn föx jümps övër thë läzy dög.',
+      ü('The quick brown fox jumps over the lazy dog.'));
+}
+
+var test_ü_n̈ = function() {
+  assertEquals(11, ü.n̈(10));
+}
+</script>
+
+</html>
